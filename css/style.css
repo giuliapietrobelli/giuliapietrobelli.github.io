@@ -11,14 +11,14 @@ body {
   min-height: 100vh;
 }
 
-.nav ul {
+/*.nav ul {
   position: fixed;
   right: 0;
   top: 50%;
   transform-origin: 100% 0;
   transform: rotate(90deg) translateX(50%);
   padding: 0;
-}
+}*/
 
 .nav a {
   color: #fe5757;
