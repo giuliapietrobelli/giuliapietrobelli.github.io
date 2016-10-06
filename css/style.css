@@ -6,19 +6,13 @@ body {
   position: relative;
 }
 
-.header {
-  background-color: #98c6f6;
-  min-height: 100vh;
+.nav ul {
+  margin: 0;
 }
 
-/*.nav ul {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform-origin: 100% 0;
-  transform: rotate(90deg) translateX(50%);
-  padding: 0;
-}*/
+.nav ul li {
+  z-index: 9999;
+}
 
 .nav .nav-up {
   position: fixed;
@@ -71,6 +65,15 @@ opacity: 10;
 transition: 0.5s opacity ease-in-out;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.section {
+  min-height: 100vh;
+}
+
 .logo {
   width: 150px;
   margin: 15% auto 15%;
@@ -80,14 +83,12 @@ transition: 0.5s opacity ease-in-out;
   width: 150px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-weight: bold;
+.header {
+  background-color: #98c6f6;
 }
 
 .about {
   background-color: #ffccb6;
-  min-height: 100vh;
 }
 
 .introduction {
@@ -395,7 +396,6 @@ button .close {
 
 .contacts {
   background-color: #FE5757;
-  height: 50vh;
 }
 
 .contact-links {
