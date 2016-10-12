@@ -1,5 +1,6 @@
 body {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -20,7 +21,7 @@ body {
   transform: translateX(-50%);
 }
 
-.nav .nav-down {
+.nav .nav-left {
   position: fixed;
   left: 0;
   top: 50%;
@@ -29,7 +30,7 @@ body {
   padding: 0;
 }
 
-.nav .nav-left {
+.nav .nav-down {
   position: fixed;
   left: 50%;
   bottom: 0;
@@ -72,6 +73,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
   min-height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .logo {
@@ -83,12 +90,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 150px;
 }
 
-.header {
+.home {
   background-color: #98c6f6;
 }
 
 .about {
   background-color: #ffccb6;
+}
+
+.cv {
+  background-color: red;
+}
+
+.works {
+  background-color: green;
 }
 
 .introduction {
@@ -158,10 +173,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 8em;
   border: solid #FE5757 3px;
   margin-top: 30px;
-}
-
-.works {
-  background-color: #fff;
 }
 
 .gallery {
@@ -249,7 +260,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .more .btn {
-  display:;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
