@@ -1,0 +1,22 @@
+{
+  "name": "giuliapietrobelli.com",
+  "version": "1.0.0",
+  "description": "Giulia's Website",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server --push-state"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giuliapietrobelli/giuliapietrobelli.com.git"
+  },
+  "author": "Giulia Pietrobelli <giuliapietrobelli@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/giuliapietrobelli/giuliapietrobelli.com/issues"
+  },
+  "homepage": "https://github.com/giuliapietrobelli/giuliapietrobelli.com#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
