@@ -1,32 +1,27 @@
 body {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  overflow: hidden;
 }
 
 .container {
   position: relative;
 }
 
-.header {
-  background-color: #98c6f6;
-  min-height: 100vh;
+.nav ul {
+  margin: 0;
 }
 
-/*.nav ul {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform-origin: 100% 0;
-  transform: rotate(90deg) translateX(50%);
-  padding: 0;
-}*/
+.nav ul li {
+  z-index: 9999;
+}
 
-.nav .homepage {
+.nav .nav-up {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.nav .aboutpage {
+.nav .nav-left {
   position: fixed;
   left: 0;
   top: 50%;
@@ -35,20 +30,20 @@ body {
   padding: 0;
 }
 
-.nav .workspage {
+.nav .nav-down {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.nav .nav-right {
   position: fixed;
   right: 0;
   top: 50%;
   transform-origin: 100% 0;
   transform: rotate(90deg) translateX(50%);
   padding: 0;
-}
-
-.nav .contactspage {
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
 }
 
 .nav a {
@@ -71,6 +66,21 @@ opacity: 10;
 transition: 0.5s opacity ease-in-out;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.section {
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .logo {
   width: 150px;
   margin: 15% auto 15%;
@@ -80,14 +90,20 @@ transition: 0.5s opacity ease-in-out;
   width: 150px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-weight: bold;
+.home {
+  background-color: #98c6f6;
 }
 
 .about {
   background-color: #ffccb6;
-  min-height: 100vh;
+}
+
+.cv {
+  background-color: red;
+}
+
+.works {
+  background-color: green;
 }
 
 .introduction {
@@ -157,10 +173,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 8em;
   border: solid #FE5757 3px;
   margin-top: 30px;
-}
-
-.works {
-  background-color: #fff;
 }
 
 .gallery {
@@ -248,7 +260,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .more .btn {
-  display:;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
@@ -395,7 +406,6 @@ button .close {
 
 .contacts {
   background-color: #FE5757;
-  height: 50vh;
 }
 
 .contact-links {
