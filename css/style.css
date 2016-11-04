@@ -47,7 +47,7 @@ body {
 }
 
 .nav a {
-  color: #fff;
+  color: #5e595b;
   font-size: 18px;
   text-decoration: none;
 }
@@ -56,9 +56,8 @@ body {
   display: inline-block;
   position: relative;
   text-transform: uppercase;
-  font-weight: 700;
   letter-spacing: 2px;
-  color: #fff;
+  color: #5e595b;
 }
 
 .nav li:hover {
@@ -67,8 +66,7 @@ transition: 0.5s opacity ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: 'Lora', serif;
 }
 
 .section {
@@ -81,17 +79,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
 }
 
-.logo {
-  width: 150px;
-  margin: 15% auto 15%;
-}
-
-.logo img {
-  width: 150px;
-}
 
 .home {
-  background-color: #98c6f6;
+  background-color: #f3edea;
 }
 
 .about {
@@ -106,34 +96,40 @@ h1, h2, h3, h4, h5, h6 {
   background-color: green;
 }
 
+.logo {
+  width: 90px;
+  margin: auto;
+}
+
+.logo img {
+  width: 90px;
+}
+
+.presentation {
+  display: block;
+  width: 70%;
+  margin: auto;
+  margin-top: 30%;
+}
+
+.home .container {
+  height: 100%;
+  width: 100%;
+  background-image: url('http://imgh.us/background-circle_3.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 115%;
+}
+
+
+
 .introduction {
   position: relative;
-  font-weight: bold;
   font-size: 41px;
-  color: #fff;
+  color: #5e595b;
   text-align: center;
   line-height: 55px;
   margin-bottom: 15%;
-}
-
-.scroll-down{
-  text-align: center;
-}
-
-.scroll-down a {
-  display: inline-block;
-  margin-bottom: 20%;
-}
-
-.scroll-down img {
-  width: 60px;
-  border-radius: 100%;
-  transition: 1s background-color ease-in-out;
-}
-
-.scroll-down a:hover img,
-.scroll-down a:focus img  {
-  background-color: #FE5757;
 }
 
 .me {
