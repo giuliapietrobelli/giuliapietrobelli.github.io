@@ -3,8 +3,18 @@ body {
   overflow: hidden;
 }
 
+h1, h2, h4, h5, h6 {
+  font-family: 'Lora', serif;
+}
+
+h3 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
 .container {
   position: relative;
+  min-width: 80vh;
+  border-bottom: 5px #000000 solid;
 }
 
 .nav ul {
@@ -65,14 +75,6 @@ opacity: 10;
 transition: 0.5s opacity ease-in-out;
 }
 
-h1, h2, h4, h5, h6 {
-  font-family: 'Lora', serif;
-}
-
-h3 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-}
-
 .section {
   min-height: 100vh;
   position: absolute;
@@ -82,7 +84,6 @@ h3 {
   right: 0;
   margin: auto;
 }
-
 
 .home {
   background-color: #f3edea;
