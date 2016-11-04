@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', serif;
   overflow: hidden;
 }
 
@@ -27,7 +27,7 @@ body {
   top: 50%;
   transform: rotate(-90deg) translateX(-50%);
   transform-origin: 0 0;
-  padding: 0;
+  padding: 5%;
 }
 
 .nav .nav-down {
@@ -43,10 +43,10 @@ body {
   top: 50%;
   transform-origin: 100% 0;
   transform: rotate(90deg) translateX(50%);
-  padding: 0;
 }
 
 .nav a {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   color: #5e595b;
   font-size: 18px;
   text-decoration: none;
@@ -56,8 +56,8 @@ body {
   display: inline-block;
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 2px;
   color: #5e595b;
+  padding: 5% 0;
 }
 
 .nav li:hover {
@@ -65,8 +65,12 @@ opacity: 10;
 transition: 0.5s opacity ease-in-out;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   font-family: 'Lora', serif;
+}
+
+h3 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 .section {
@@ -85,15 +89,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about {
-  background-color: #ffccb6;
+  background-color: #836d6d;
 }
 
 .cv {
-  background-color: red;
+  background-color: #fff;
 }
 
 .works {
-  background-color: green;
+  background-color: #fff;
+}
+
+.contacts {
+  background-color: #5e595b;
 }
 
 .logo {
@@ -122,13 +130,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 .introduction {
   position: relative;
-  font-size: 41px;
+  font-size: 35px;
   color: #5e595b;
   text-align: center;
-  line-height: 55px;
+  line-height: 51px;
   margin-bottom: 15%;
 }
 
@@ -151,24 +158,24 @@ h1, h2, h3, h4, h5, h6 {
 .aboutme p {
   position: relative;
   text-align: center;
-  font-size: 15px;
-  line-height: 23px;
-  color: #5c5c5c;
-  margin-bottom: 25%;
+  font-size: 18px;
+  line-height: 25px;
+  color: #f3edea;
 }
 
 .aboutme .btn {
   display: block;
-  margin: auto;
+  font-family: 'montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
-  color: #FE5757;
-  padding: 7px;
-  width: 8em;
-  border: solid #FE5757 3px;
-  margin-top: 30px;
+  color: #f3edea;
+  width: 14em;
+  padding: 14px;
+  border: solid #f3edea 1px;
+  border-radius: inherit;
+  margin: 30px auto;
 }
 
 .gallery {
@@ -193,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-title {
   position: absolute;
-  background-color: #fe5757;
+  background-color: #5e595b;
   top: 0;
   bottom: 0;
   right: 0;
@@ -244,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-link {
-  color: #000000;
+  color: #5e595b;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -259,9 +266,9 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #FE5757;
+  color: #5e595b;
   padding: 7px;
-  border: solid #FE5757 3px;
+  border: solid #5e595b 3px;
   margin-bottom: 125px;
 }
 
@@ -401,7 +408,7 @@ button .close {
 /*----------- LIGHTBOX-------------------------------------------------*/
 
 .contacts {
-  background-color: #FE5757;
+    background-color: #5e595b;
 }
 
 .contact-links {
@@ -418,7 +425,7 @@ button .close {
 .email:hover {
   text-decoration: none;
   transition: 0.3s color ease-in-out;
-  color: #ffccb6;
+  color: #ee3963;
 }
 
 .contact-links img {
@@ -430,6 +437,6 @@ button .close {
 
 .contact-links a:hover img,
 .contact-links a:focus img  {
-  background-color: #ffccb6;
+  background-color: #ee3963;
   text-decoration: none;
 }
