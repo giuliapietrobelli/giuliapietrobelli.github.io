@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/giuliapietrobelli/giuliapietrobelli.com#readme",
   "devDependencies": {
-    "http-server": "^0.9.0"
+    "spa-http-server": "^0.9.0"
   }
 }
