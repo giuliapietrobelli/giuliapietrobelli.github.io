@@ -14,7 +14,6 @@ h3 {
 .container {
   position: relative;
   min-width: 80vh;
-  border-bottom: 5px #000000 solid;
 }
 
 .nav ul {
@@ -25,34 +24,45 @@ h3 {
   z-index: 9999;
 }
 
-.nav .nav-up {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+.nav .nav-up,
+.nav .nav-down {
+  left: 62px;
+  right: 62px;
 }
 
-.nav .nav-left {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: rotate(-90deg) translateX(-50%);
-  transform-origin: 0 0;
-  padding: 5%;
+.nav .nav-up {
+  top: 50px;
 }
 
 .nav .nav-down {
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
+  bottom: 50px;
+}
+
+.nav .nav-left,
+.nav .nav-right {
+  top: 62px;
+  bottom: 62px;
+  padding: 0;
+  flex-direction: column;
+}
+
+.nav .nav-left {
+  left: 50px;
+}
+
+.nav .nav-left a {
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  padding: 15px 0;
 }
 
 .nav .nav-right {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform-origin: 100% 0;
-  transform: rotate(90deg) translateX(50%);
+  right: 50px;
+}
+
+.nav .nav-right a {
+  writing-mode: vertical-lr;
+  padding: 15px 0;
 }
 
 .nav a {
@@ -60,19 +70,46 @@ h3 {
   color: #5e595b;
   font-size: 18px;
   text-decoration: none;
+  padding: 0 15px;
+}
+
+.nav .nav-up,
+.nav .nav-down,
+.nav .nav-left,
+.nav .nav-right {
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.nav .nav-up::before,
+.nav .nav-up::after,
+.nav .nav-down::before,
+.nav .nav-down::after {
+  content: '';
+  height: 1px;
+  background-color: #000;
+  width: 100%;
+}
+
+.nav .nav-left::before,
+.nav .nav-left::after,
+.nav .nav-right::before,
+.nav .nav-right::after {
+  content: '';
+  height: 100%;
+  background-color: #000;
+  width: 1px;
 }
 
 .nav li {
-  display: inline-block;
-  position: relative;
   text-transform: uppercase;
   color: #5e595b;
-  padding: 5% 0;
 }
 
 .nav li:hover {
-opacity: 10;
-transition: 0.5s opacity ease-in-out;
+  opacity: 10;
+  transition: 0.5s opacity ease-in-out;
 }
 
 .section {
@@ -85,23 +122,27 @@ transition: 0.5s opacity ease-in-out;
   margin: auto;
 }
 
-.home {
+.section.home {
   background-color: #f3edea;
+  background-image: url('../images/background-circle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 115%;
 }
 
-.about {
+.section.about {
   background-color: #836d6d;
 }
 
-.cv {
+.section.cv {
   background-color: #fff;
 }
 
-.works {
+.section.works {
   background-color: #fff;
 }
 
-.contacts {
+.section.contacts {
   background-color: #5e595b;
 }
 
@@ -120,16 +161,12 @@ transition: 0.5s opacity ease-in-out;
   margin: auto;
   margin-top: 30%;
 }
-
+/*
 .home .container {
   height: 100%;
   width: 100%;
-  background-image: url('http://imgh.us/background-circle_3.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 115%;
 }
-
+*/
 
 .introduction {
   position: relative;
