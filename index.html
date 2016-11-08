@@ -22,68 +22,44 @@
 
     <!-- Header -->
     <section data-path="/" data-m-pos="horizontal" class="section home" data-name="home">
-      <div class="container">
-        <div class="presentation">
-          <h1 class="logo">
-            <img src="images/logo_giulia.svg">
-          </h1>
-          <h2 class="introduction">Hello! I'm an Italian<br> digital designer and illustrator<br> living in London.</h2>
-        </div>
+      <div class="page-container">
+        <h1 class="logo">
+          <img src="images/logo_giulia.svg">
+        </h1>
+        <h2 class="introduction">Hello! I'm an Italian<br> digital designer and illustrator<br> living in London.</h2>
       </div>
     </section>
     <!-- END Header -->
 
     <!-- About me -->
     <section data-path="/about" data-m-pos="vertical" class="section about" data-name="about">
-      <div class="container">
+      <div class="page-container">
         <!-- <h3 class="section-title">about</h3> -->
-        <div class="me">
-          <img src="images/me.svg">
-        </div>
-      </div>
-      <div class="container">
-        <div class="aboutme">
-          <div class="row">
-            <div class="col-xs-6 col-xs-offset-3">
-              <p>My name is Giulia, I am a graphic designer with a passion for web design and illustration.<br>
-                I love to use my creativity to create beautiful and useful things, always trying to grow and improve my skills through challenging projects.<br>
-                Except designing I enjoy travelling, listening to music and daydreaming.<br>
-                I’m a fan of nature, an animal lover and a <a target="_blank" href="https://www.16personalities.com/infp-personality">INFP</a> type person.<a href="#" class="btn">download cv</a></p>
-            </div>
+        <div class="about-me">
+          <div class="me">
+            <img src="images/me.svg">
+          </div>
+          <div class="my-description">
+            <p>
+              My name is Giulia, I am a graphic designer with a passion for web design and illustration.<br>
+              I love to use my creativity to create beautiful and useful things, always trying to grow and improve my skills through challenging projects.<br>
+              Except designing I enjoy travelling, listening to music and daydreaming.<br>
+              I’m a fan of nature, an animal lover and a <a target="_blank" href="https://www.16personalities.com/infp-personality">INFP</a> type person.
+              <a href="#" class="btn">download cv</a>
+            </p>
           </div>
         </div>
       </div>
     </section>
     <!-- END About me -->
 
-    <!-- Cv -->
-    <section data-path="/cv" data-m-pos="vertical" class="section cv" data-name="cv">
-      <div class="container">
-        CV page
-      </div>
-    </section>
-    <!-- END Cv -->
-
     <!-- Works -->
     <section data-path="/works" data-m-pos="horizontal" class="section works" data-name="works">
-      <div class="container">
+      <div class="page-container">
         <!-- <h3 class="section-title">works</h3> -->
-        <div class="dropdown">
-          <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            filter by
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">Illustrations</a></li>
-            <li><a href="#">Web design</a></li>
-            <li><a href="#">Print design</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">All</a></li>
-          </ul>
-        </div>
-        <div class="row gallery">
-          <ul class="list-unstyled">
-            <li class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-lg-4">
+
+          <ul class="gallery">
+            <li>
               <a href="#" class="gallery-entry" data-toggle="modal" data-target="#deer-illustration">
                 <img src="images/deer.jpg">
                 <div class="gallery-title">
@@ -94,7 +70,7 @@
                 </div>
               </a>
             </li>
-            <li class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-lg-4">
+            <li>
               <a href="#" class="gallery-entry" data-toggle="modal" data-target="#dvd-crudo">
                 <img src="images/crudo.jpg">
                 <div class="gallery-title">
@@ -105,7 +81,7 @@
                 </div>
               </a>
             </li>
-            <li class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-lg-4">
+            <li>
               <a href="#" class="gallery-entry" data-toggle="modal" data-target="#sz-logo">
                 <img src="images/sz-logo.jpg">
                 <div class="gallery-title">
@@ -116,7 +92,7 @@
                 </div>
               </a>
             </li>
-            <li class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-lg-4">
+            <li>
               <a href="#" class="gallery-entry" data-toggle="modal" data-target="#diesel-tribute">
                 <img src="images/tribute.jpg">
                 <div class="gallery-title">
@@ -128,10 +104,11 @@
               </a>
             </li>
           </ul>
-        </div>
-        <div class="more">
-          <a href="https://www.behance.net/giuliapietrobelli7be" class="btn" target="_blank">see more on behance</a>
-        </div>
+
+          <div class="more">
+            <a href="https://www.behance.net/giuliapietrobelli7be" class="btn" target="_blank">see more on behance</a>
+          </div>
+        <div>
       </div>
       <div class="modal fade" id="deer-illustration" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -237,11 +214,11 @@
 
     <!-- Contacts -->
     <section data-path="/contacts" data-m-pos="horizontal" class="section contacts" data-name="contacts">
-      <div class="container">
+      <div class="page-container">
         <!-- <h3 class="section-title">contacts</h3> -->
-        <div class="row contact-links">
-          <div class="col-xs-6 col-xs-offset-3">
-            <a href="mailto:giuliapietrobelli@gmail.com" class="email">giuliapietrobelli@gmail.com</a>
+        <div class="contact-links">
+          <a href="mailto:giuliapietrobelli@gmail.com" class="email">giuliapietrobelli@gmail.com</a>
+          <div class="contact-links icons">
             <a href="https://it.linkedin.com/in/giuliapietrobelli" target="_blank">
               <img src="images/linkedin_button.svg">
             </a>

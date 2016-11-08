@@ -1,5 +1,6 @@
 body {
   font-family: 'Lora', serif;
+  /*overflow-x: hidden;*/
   overflow: hidden;
 }
 
@@ -11,9 +12,20 @@ h3 {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
-.container {
+.page-container {
   position: relative;
-  min-width: 80vh;
+  min-height: calc(100vh - 63 * 2px);
+  width: calc(100vw - 63 * 2px);
+  margin: 63px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.page-container > * {
+  max-width: 1200px;
 }
 
 .nav ul {
@@ -124,10 +136,10 @@ h3 {
 
 .section.home {
   background-color: #f3edea;
-  background-image: url('../images/background-circle.png');
+  /*background-image: url('../images/background-circle.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 115%;
+  background-size: 115%;*/
 }
 
 .section.about {
@@ -146,54 +158,35 @@ h3 {
   background-color: #5e595b;
 }
 
-.logo {
-  width: 90px;
-  margin: auto;
-}
-
 .logo img {
   width: 90px;
 }
-
-.presentation {
-  display: block;
-  width: 70%;
-  margin: auto;
-  margin-top: 30%;
-}
-/*
-.home .container {
-  height: 100%;
-  width: 100%;
-}
-*/
 
 .introduction {
   position: relative;
   font-size: 35px;
   color: #5e595b;
   text-align: center;
-  line-height: 51px;
-  margin-bottom: 15%;
+  line-height: 1.48em;
 }
 
-.me {
-  position: relative;
-  margin: auto;
-  width: 316px;
-  margin-bottom: 65px;
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.me img {
-  max-width: 88%;
-  margin-top: 25%;
+.about-me > * {
+  flex-basis: 50%;
+  text-align: center;
 }
 
-.aboutme {
-  position: relative;
+.about-me .me img {
+  /*max-width: 88%;*/
 }
 
-.aboutme p {
+.about-me .my-description p {
   position: relative;
   text-align: center;
   font-size: 18px;
@@ -201,7 +194,7 @@ h3 {
   color: #f3edea;
 }
 
-.aboutme .btn {
+.about-me .btn {
   display: block;
   font-family: 'montserrat', sans-serif;
   text-transform: uppercase;
@@ -217,17 +210,18 @@ h3 {
 }
 
 .gallery {
-  margin-top: 150px;
-  margin-bottom: 125px;
-}
-
-.gallery ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
   margin: 0;
+  padding: 0;
 }
 
 .gallery li {
-  padding: 0px;
+  max-width: 320px;
+  padding: 15px;
 }
 
 .gallery-entry {
@@ -266,6 +260,7 @@ h3 {
 
 .gallery-title p {
   text-transform: lowercase;
+  font-style: italic;
   font-size: 16px;
 }
 
@@ -451,7 +446,6 @@ button .close {
 
 .contact-links {
   text-align: center;
-  margin-top: 136px;
 }
 
 .email {
@@ -466,9 +460,13 @@ button .close {
   color: #ee3963;
 }
 
+.contact-links .icons a {
+  display: inline-block;
+  margin: 12px 12px;
+}
+
 .contact-links img {
   max-width: 60px;
-  margin: 50px 12px;
   border-radius: 100%;
   transition: 1s background-color ease-in-out;
 }
