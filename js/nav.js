@@ -94,7 +94,6 @@
     }, new Object(null));
 
     return function() {
-
       var render = function(layout) {
         Object.keys(menu).forEach(function(pos) {
           menu[pos].text($(layout[pos]).data('name'));
@@ -102,8 +101,19 @@
         });
       }
 
+      var setActivePage = function(activePage) {
+        Object.keys(menu).forEach(function(pos) {
+          if(menu[pos].attr('href') === activePage.data('path')) {
+            menu[pos].addClass('active');
+          } else {
+            menu[pos].removeClass('active');
+          }
+        });
+      };
+
       return {
-        render: render
+        render: render,
+        setActivePage: setActivePage
       };
     }
   };
@@ -278,7 +288,8 @@
       }
 
       $('body').removeClass().addClass($currentPage.data('name'));
-      menu.render(matrix.getCurrentLayout());
+      // menu.render(matrix.getCurrentLayout());
+      menu.setActivePage($currentPage);
       direction = null;
     });
 
@@ -295,13 +306,15 @@
     $('.nav').on('click', function(e) {
       e.preventDefault();
       var $target = $(e.target);
-      var pagePath = $target.attr('href');
+      var reqPath = $target.attr('href');
       direction = $target.data('menu-position');
 
-      if(!pagePath) return;
+      if(!reqPath) return;
+
+      if($(router.getCurrentPage()).data('path') === reqPath) return;
 
       if(!animating) {
-        router.goTo(pagePath);
+        router.goTo(reqPath);
       }
     });
 

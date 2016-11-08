@@ -75,6 +75,7 @@ h3 {
 .nav .nav-right a {
   writing-mode: vertical-lr;
   padding: 15px 0;
+  white-space: nowrap;
 }
 
 .nav a {
@@ -83,6 +84,11 @@ h3 {
   font-size: 18px;
   text-decoration: none;
   padding: 0 15px;
+}
+
+.nav a.active {
+  text-decoration: line-through;
+  cursor: default;
 }
 
 .nav .nav-up,
