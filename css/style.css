@@ -1,11 +1,34 @@
 body {
   font-family: 'Lora', serif;
   overflow-x: hidden;
-  /*overflow: hidden;*/
 }
 
 body.animating {
   overflow: hidden;
+}
+
+body.home {
+  background-color: #f3edea;
+  /*background-image: url('../images/background-circle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 115%;*/
+}
+
+body.about {
+  background-color: #836d6d;
+}
+
+body.cv {
+  background-color: #fff;
+}
+
+body.works {
+  background-color: #fff;
+}
+
+body.contacts {
+  background-color: #5e595b;
 }
 
 h1, h2, h4, h5, h6 {
@@ -14,6 +37,10 @@ h1, h2, h4, h5, h6 {
 
 h3 {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 
 .page-container {
@@ -30,6 +57,18 @@ h3 {
 
 .page-container > * {
   max-width: 1200px;
+}
+
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 63px;
+  top: 63px;
+  left: 63px;
+  right: 63px;
+  background-color: transparent;
+  z-index: -1;
 }
 
 .nav ul {
@@ -164,29 +203,6 @@ body.about .nav .nav-right::after {
   margin: auto;
 }
 
-.section.home {
-  background-color: #f3edea;
-  /*background-image: url('../images/background-circle.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 115%;*/
-}
-
-.section.about {
-  background-color: #836d6d;
-}
-
-.section.cv {
-  background-color: #fff;
-}
-
-.section.works {
-  background-color: #fff;
-}
-
-.section.contacts {
-  background-color: #5e595b;
-}
 
 .logo img {
   width: 90px;
@@ -212,8 +228,14 @@ body.about .nav .nav-right::after {
   text-align: center;
 }
 
-.about-me .me img {
-  /*max-width: 88%;*/
+.about-me .me {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  .about-me .me {
+    display: block;
+  }
 }
 
 .about-me .my-description p {
@@ -332,7 +354,7 @@ body.about .nav .nav-right::after {
   color: #5e595b;
   padding: 7px;
   border: solid #5e595b 3px;
-  margin-bottom: 125px;
+  white-space: normal;
 }
 
 .more {
@@ -477,7 +499,13 @@ button .close {
 .email {
   display: block;
   color: #fff;
-  font-size: 25px;
+  font-size: 18px;
+}
+
+@media (min-width: 767px) {
+  .email {
+    font-size: 25px;
+  }
 }
 
 .email:hover {
