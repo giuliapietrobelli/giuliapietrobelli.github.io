@@ -240,7 +240,8 @@
       // callback called everytime the router changes page
       var $prevPage = $(prevPage);
       var $currentPage = $(currentPage);
-      animating = true;
+      var animating = true;
+      $('body').addClass('animating');
 
       matrix.moveTo(currentPage);
       $pages.not($prevPage).hide();
@@ -249,9 +250,11 @@
         $prevPage.addClass('magictime slideRight');
         $currentPage.addClass('magictime slideLeftReturn').show();
 
+
         setTimeout(function(){
           $prevPage.hide().removeClass('magictime slideRight');
           $currentPage.removeClass('magictime slideLeftReturn');
+          $('body').removeClass('animating');
           animating = false;
         }, 1000);
       } else if(direction === 'right') {
@@ -261,6 +264,7 @@
         setTimeout(function(){
           $prevPage.hide().removeClass('magictime slideLeft');
           $currentPage.removeClass('magictime slideRightReturn');
+          $('body').removeClass('animating');
           animating = false;
         }, 1000);
       } else if(direction === 'top') {
@@ -270,6 +274,7 @@
         setTimeout(function(){
           $prevPage.hide().removeClass('magictime slideDown');
           $currentPage.removeClass('magictime slideUpReturn');
+          $('body').removeClass('animating');
           animating = false;
         }, 1000);
       } else if(direction === 'bottom') {
@@ -279,15 +284,27 @@
         setTimeout(function(){
           $prevPage.hide().removeClass('magictime slideUp');
           $currentPage.removeClass('magictime slideDownReturn');
+          $('body').removeClass('animating');
           animating = false;
         }, 1000);
       } else {
         $prevPage.hide();
         $currentPage.show();
+        $('body').removeClass('animating');
         animating = false;
       }
 
-      $('body').removeClass().addClass($currentPage.data('name'));
+      $('body')
+        .removeClass(function(i, string) {
+          var list = string.split(' ');
+          return list = list.filter(function(className) {
+            if(className !== 'animating') {
+              return className;
+            }
+          }).join(' ');
+        })
+        .addClass($currentPage.data('name'));
+
       // menu.render(matrix.getCurrentLayout());
       menu.setActivePage($currentPage);
       direction = null;

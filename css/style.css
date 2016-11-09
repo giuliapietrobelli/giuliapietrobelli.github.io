@@ -1,6 +1,10 @@
 body {
   font-family: 'Lora', serif;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
+  /*overflow: hidden;*/
+}
+
+body.animating {
   overflow: hidden;
 }
 
@@ -33,7 +37,7 @@ h3 {
 }
 
 .nav ul li {
-  z-index: 9999;
+  z-index: 10;
 }
 
 .nav .nav-up,
