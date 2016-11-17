@@ -123,11 +123,13 @@ body::after {
 
 .nav a {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  text-decoration: none;
-  padding: 0 15px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 2px 15px;
   text-transform: uppercase;
   color: #5e595b;
+  text-decoration: none;
 }
 
 body.contacts .nav a,
@@ -138,6 +140,11 @@ body.about .nav a {
 .nav a.active {
   text-decoration: line-through;
   cursor: default;
+}
+
+.nav a:hover {
+  transition: 0.3s color ease-in-out;
+  color: #ee3963;
 }
 
 .nav .nav-up,
@@ -210,7 +217,7 @@ body.about .nav .nav-right::after {
 
 .introduction {
   position: relative;
-  font-size: 35px;
+  font-size: 30px;
   color: #5e595b;
   text-align: center;
   line-height: 1.48em;
@@ -232,6 +239,10 @@ body.about .nav .nav-right::after {
   display: none;
 }
 
+.about-me img {
+  max-width: 70%;
+}
+
 @media (min-width: 767px) {
   .about-me .me {
     display: block;
@@ -241,9 +252,19 @@ body.about .nav .nav-right::after {
 .about-me .my-description p {
   position: relative;
   text-align: center;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 17px;
+  line-height: 29px;
   color: #f3edea;
+}
+
+p a {
+  color: #FACFCD;
+  font-weight: bold;
+}
+
+p a:hover {
+  color: #ee3963;
+  text-decoration: none;
 }
 
 .about-me .btn {
@@ -253,12 +274,17 @@ body.about .nav .nav-right::after {
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
-  color: #f3edea;
+  color: #FACFCD;
   width: 14em;
   padding: 14px;
-  border: solid #f3edea 1px;
+  border: solid #FACFCD 1px;
   border-radius: inherit;
   margin: 30px auto;
+}
+
+.about-me .btn:hover {
+  color: #ee3963;
+  transition: 0.3s color ease-in-out;
 }
 
 .gallery {
@@ -348,13 +374,21 @@ body.about .nav .nav-right::after {
 }
 
 .more .btn {
+  display: block;
+  font-family: 'montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  text-align: center;
   color: #5e595b;
-  padding: 7px;
-  border: solid #5e595b 3px;
-  white-space: normal;
+  padding: 13px 23px;
+  border: solid #5e595b 1px;
+  margin: 30px auto;
+}
+
+.more .btn:hover {
+  transition: 0.3s color ease-in-out;
+  color: #ee3963;
 }
 
 .more {
