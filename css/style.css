@@ -19,10 +19,6 @@ body.about {
   background-color: #836d6d;
 }
 
-body.cv {
-  background-color: #fff;
-}
-
 body.works {
   background-color: #fff;
 }
@@ -45,14 +41,22 @@ img {
 
 .page-container {
   position: relative;
-  min-height: calc(100vh - 63 * 2px);
-  width: calc(100vw - 63 * 2px);
-  margin: 63px auto;
+  min-height: calc(100vh - 30 * 2px);
+  width: calc(100vw - 30 * 2px);
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+}
+
+@media (min-width: 767px) {
+  .page-container {
+    min-height: calc(100vh - 63 * 2px);
+    width: calc(100vw - 63 * 2px);
+    padding: 30px;
+    margin: 63px auto;
+  }
 }
 
 .page-container > * {
@@ -86,11 +90,23 @@ body::after {
 }
 
 .nav .nav-up {
-  top: 50px;
+  top: 0;
+}
+
+@media (min-width: 767px) {
+  .nav .nav-up {
+    top: 50px;
+  }
 }
 
 .nav .nav-down {
-  bottom: 50px;
+  bottom: 0;
+}
+
+@media (min-width: 767px) {
+  .nav .nav-down {
+    bottom: 50px;
+  }
 }
 
 .nav .nav-left,
@@ -102,7 +118,13 @@ body::after {
 }
 
 .nav .nav-left {
-  left: 50px;
+  left: 0;
+}
+
+@media (min-width: 767px) {
+  .nav .nav-left {
+    left: 50px;
+  }
 }
 
 .nav .nav-left a {
@@ -112,7 +134,13 @@ body::after {
 }
 
 .nav .nav-right {
-  right: 50px;
+  right: 0;
+}
+
+@media (min-width: 767px) {
+  .nav .nav-right {
+    right: 50px;
+  }
 }
 
 .nav .nav-right a {
@@ -132,19 +160,19 @@ body::after {
   text-decoration: none;
 }
 
-body.contacts .nav a,
-body.about .nav a {
+body.contacts .nav a:not(.active),
+body.about .nav a:not(.active) {
   color: #f3edea;
 }
 
-.nav a.active {
-  text-decoration: line-through;
-  cursor: default;
+.nav a.active,
+.nav a:hover {
+  color: #ee3963;
+  transition: 0.3s color ease-in-out;
 }
 
-.nav a:hover {
-  transition: 0.3s color ease-in-out;
-  color: #ee3963;
+.nav a.active {
+  cursor: default;
 }
 
 .nav .nav-up,
@@ -154,27 +182,32 @@ body.about .nav a {
   position: fixed;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.nav .nav-up::before,
-.nav .nav-up::after,
-.nav .nav-down::before,
-.nav .nav-down::after {
-  content: '';
-  height: 1px;
-  background-color: #5e595b;
-  width: 100%;
+
+@media (min-width: 767px) {
+  .nav .nav-up::before,
+  .nav .nav-up::after,
+  .nav .nav-down::before,
+  .nav .nav-down::after {
+    content: '';
+    height: 1px;
+    background-color: #5e595b;
+    width: 100%;
+  }
+
+  .nav .nav-left::before,
+  .nav .nav-left::after,
+  .nav .nav-right::before,
+  .nav .nav-right::after {
+    content: '';
+    height: 100%;
+    background-color: #5e595b;
+    width: 1px;
+  }
 }
 
-.nav .nav-left::before,
-.nav .nav-left::after,
-.nav .nav-right::before,
-.nav .nav-right::after {
-  content: '';
-  height: 100%;
-  background-color: #5e595b;
-  width: 1px;
-}
 
 body.contacts .nav .nav-up::before,
 body.contacts .nav .nav-up::after,
@@ -195,6 +228,24 @@ body.about .nav .nav-right::after {
   background-color: #f3edea;
 }
 
+.nav .nav-up a {
+  color: transparent !important;
+  background-image: url(../images/logo_giulia.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav .nav-up a:hover,
+.nav .nav-up .active {
+  background-image: url(../images/logo_giulia_magenta.svg) !important;
+}
+
+body.contacts .nav .nav-up a:not(.active),
+body.about .nav .nav-up a:not(.active) {
+  background-image: url(../images/logo_giulia_white.svg);
+}
+
 .nav li:hover {
   opacity: 10;
   transition: 0.5s opacity ease-in-out;
@@ -210,17 +261,22 @@ body.about .nav .nav-right::after {
   margin: auto;
 }
 
-
 .logo img {
   width: 90px;
 }
 
 .introduction {
   position: relative;
-  font-size: 30px;
+  font-size: 22px;
   color: #5e595b;
   text-align: center;
   line-height: 1.48em;
+}
+
+@media (min-width: 767px) {
+  .introduction {
+    font-size: 30px;
+  }
 }
 
 .about-me {
@@ -249,12 +305,28 @@ body.about .nav .nav-right::after {
   }
 }
 
+.about-me .my-description {
+  padding: 30px 0;
+}
+
+@media (min-width: 767px) {
+  .about-me .my-description {
+    padding: 0;
+  }
+}
+
 .about-me .my-description p {
   position: relative;
   text-align: center;
-  font-size: 17px;
-  line-height: 29px;
+  font-size: 15px;
+  line-height: 1.8em;
   color: #f3edea;
+}
+
+@media (min-width: 767px) {
+  .about-me .my-description p {
+    font-size: 17px;
+  }
 }
 
 p a {
@@ -283,7 +355,8 @@ p a:hover {
 }
 
 .about-me .btn:hover {
-  color: #ee3963;
+  background-color: #FACFCD;
+  color: #5e595b;
   transition: 0.3s color ease-in-out;
 }
 
@@ -323,6 +396,7 @@ p a:hover {
 .gallery-entry:hover .gallery-title {
   transform: translateY(0);
 }
+
 
 .gallery-title .package {
   position: absolute;
@@ -383,12 +457,14 @@ p a:hover {
   color: #5e595b;
   padding: 13px 23px;
   border: solid #5e595b 1px;
+  border-radius: inherit;
   margin: 30px auto;
 }
 
 .more .btn:hover {
   transition: 0.3s color ease-in-out;
-  color: #ee3963;
+  color: #fff;
+  background-color: #5e595b;
 }
 
 .more {
@@ -425,16 +501,18 @@ p a:hover {
   color: #fff;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 41px;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
 
 .modal-description {
   color: #fff;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', serif;
+  font-style: italic;
   font-size: 15px;
   text-align: center;
-  line-height: 24px;
+  line-height: 30px;
 }
 
 .modal-body {
@@ -455,13 +533,12 @@ button .close {
 }
 
 .close:hover {
-  font-size: 83px;
   color: #fff;
   transition: 0.3s font-size ease-in-out;
 }
 
 #deer-illustration .modal-header {
- background-color: #fe7a83;
+ background-color: #5e595b;
 }
 
 .deer-stripe1 {
@@ -477,7 +554,7 @@ button .close {
 }
 
 #dvd-crudo .modal-header {
- background-color: #93ab35;
+ background-color: #5e595b;
 }
 
 .crudo-stripe1 {
@@ -493,7 +570,7 @@ button .close {
 }
 
 #sz-logo .modal-header {
- background-color: #115159;
+ background-color: #5e595b;
 }
 
 .sz-stripe1 {
@@ -505,15 +582,15 @@ button .close {
 }
 
 .sz-stripe3 {
-  background-color: #000000;
+  background-color: #7a9d9c;
 }
 
 #diesel-tribute .modal-header {
- background-color: #2466af;
+ background-color: #5e595b;
 }
 
 .tribute-stripe1 {
- background-color: #144075;
+ background-color: #cdcdcd;
 }
 
 .tribute-stripe2 {
@@ -523,6 +600,59 @@ button .close {
 .tribute-stripe3 {
  background-color: #d03c96;
 }
+
+#findmybike .modal-header {
+ background-color: #5e595b;
+}
+
+.findmybike-stripe1 {
+ background-color: #F5F4F2;
+}
+
+.findmybike-stripe2 {
+ background-color: #EF4840;
+}
+
+.findmybike-stripe3 {
+ background-color: #F5F4F2;
+}
+
+.findmybike-stripe4 {
+ background-color: #F5F4F2;
+}
+
+.findmybike-stripe6 {
+ background-color: #EF4840;
+}
+
+#dieselevent .modal-header {
+ background-color: #5e595b;
+}
+
+.dieselevent-stripe1 {
+ background-color: #CDCDCD;
+}
+
+.dieselevent-stripe2 {
+ background-color: #CDCDCD;
+}
+
+.dieselevent-stripe3 {
+ background-color: #000000;
+}
+
+/*.dieselevent-stripe4 {*/
+ background-color: #000000;
+}
+
+.dieselevent-stripe5 {
+ background-color: #000000;
+}
+
+.dieselevent-stripe6 {
+ background-color: #000000;
+}
+
 
 /*----------- LIGHTBOX-------------------------------------------------*/
 
@@ -550,17 +680,17 @@ button .close {
 
 .contact-links .icons a {
   display: inline-block;
-  margin: 12px 12px;
+  margin: 10px;
 }
 
 .contact-links img {
   max-width: 60px;
-  border-radius: 100%;
-  transition: 1s background-color ease-in-out;
+  transition: 1s border ease-in-out;
+  border: 1px solid transparent;
 }
 
 .contact-links a:hover img,
 .contact-links a:focus img  {
-  background-color: #ee3963;
+  border: 1px solid #f3edea;
   text-decoration: none;
 }
