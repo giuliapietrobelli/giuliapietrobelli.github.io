@@ -510,7 +510,6 @@ margin: 30px auto;
 .modal-description {
   color: #fff;
   font-family: 'Lora', serif;
-  font-style: italic;
   font-size: 15px;
   text-align: center;
   line-height: 30px;
@@ -528,9 +527,8 @@ button .close {
 .close {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 80px;
+  font-size: 50px;
   color: #fff;
-  opacity: 10;
 }
 
 .close:hover {
