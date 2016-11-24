@@ -356,8 +356,8 @@ margin: 30px auto;
 }
 
 .about-me .btn:hover {
-  background-color: #ee3963;
   color: #ee3963;
+  border: solid #ee3963 1px;
   transition: 0.3s color ease-in-out;
 }
 
