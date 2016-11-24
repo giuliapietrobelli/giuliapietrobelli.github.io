@@ -330,8 +330,8 @@ body.about .nav .nav-up a:not(.active) {
 }
 
 p a {
-  color: #FACFCD;
-  font-weight: bold;
+  color: #f3edea;
+  text-decoration: underline;
 }
 
 p a:hover {
@@ -340,23 +340,24 @@ p a:hover {
 }
 
 .about-me .btn {
-  display: block;
-  font-family: 'montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-align: center;
-  color: #FACFCD;
-  width: 14em;
-  padding: 14px;
-  border: solid #FACFCD 1px;
-  border-radius: inherit;
-  margin: 30px auto;
+display: block;
+font-family: 'montserrat', sans-serif;
+text-transform: uppercase;
+font-weight: 700;
+text-decoration: none;
+letter-spacing: 1px;
+text-align: center;
+color: #f3edea;
+width: 14em;
+padding: 14px;
+border: solid #f3edea 1px;
+border-radius: inherit;
+margin: 30px auto;
 }
 
 .about-me .btn:hover {
-  background-color: #FACFCD;
-  color: #5e595b;
+  background-color: #ee3963;
+  color: #ee3963;
   transition: 0.3s color ease-in-out;
 }
 
