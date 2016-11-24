@@ -358,7 +358,7 @@ margin: 30px auto;
 .about-me .btn:hover {
   color: #ee3963;
   border: solid #ee3963 1px;
-  transition: 0.3s color ease-in-out;
+  transition: 0.3s color, border ease-in-out;
 }
 
 .gallery {
@@ -513,6 +513,8 @@ margin: 30px auto;
   font-size: 15px;
   text-align: center;
   line-height: 30px;
+  max-width: 70%;
+  margin: auto;
 }
 
 .modal-body {
@@ -529,6 +531,7 @@ button .close {
   font-weight: normal;
   font-size: 50px;
   color: #fff;
+  opacity: 10;
 }
 
 .close:hover {
