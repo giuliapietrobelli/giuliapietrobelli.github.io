@@ -7,7 +7,11 @@ body.animating {
   overflow: hidden;
 }
 
-body.home {
+body.home,
+body.home .nav-up,
+body.home .nav-down,
+body.home .nav-right,
+body.home .nav-left {
   background-color: #f3edea;
   /*background-image: url('../images/background-circle.png');
   background-repeat: no-repeat;
@@ -15,15 +19,27 @@ body.home {
   background-size: 115%;*/
 }
 
-body.about {
+body.about,
+body.about .nav-up,
+body.about .nav-down,
+body.about .nav-right,
+body.about .nav-left  {
   background-color: #836d6d;
 }
 
-body.works {
+body.works,
+body.works .nav-up,
+body.works .nav-down,
+body.works .nav-right,
+body.works .nav-left  {
   background-color: #fff;
 }
 
-body.contacts {
+body.contacts,
+body.contacts .nav-up,
+body.contacts .nav-down,
+body.contacts .nav-right,
+body.contacts .nav-left  {
   background-color: #5e595b;
 }
 
@@ -85,45 +101,65 @@ body::after {
 
 .nav .nav-up,
 .nav .nav-down {
-  left: 62px;
-  right: 62px;
+  left: 0;
+  right: 0;
 }
 
 .nav .nav-up {
   top: 0;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 767px) {
   .nav .nav-up {
-    top: 50px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    padding-left: 61px;
+    padding-right: 61px;
   }
 }
 
 .nav .nav-down {
   bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 @media (min-width: 767px) {
   .nav .nav-down {
-    bottom: 50px;
+    left: 61px;
+    right: 61px;
+    padding-bottom: 50px;
+    padding-top: 15px;
   }
 }
 
 .nav .nav-left,
 .nav .nav-right {
-  top: 62px;
-  bottom: 62px;
-  padding: 0;
+  top: 0;
+  bottom: 0;
   flex-direction: column;
+}
+
+@media (min-width: 767px) {
+  .nav .nav-left,
+  .nav .nav-right {
+    top: 63px;
+    padding-bottom: 62px;
+  }
 }
 
 .nav .nav-left {
   left: 0;
+  padding-left: 5px;
+  padding-right: 10px;
 }
 
 @media (min-width: 767px) {
   .nav .nav-left {
-    left: 50px;
+    padding-left: 50px;
+    padding-right: 15px;
   }
 }
 
@@ -135,11 +171,14 @@ body::after {
 
 .nav .nav-right {
   right: 0;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 
 @media (min-width: 767px) {
   .nav .nav-right {
-    right: 50px;
+    padding-left: 15px;
+    padding-right: 50px;
   }
 }
 
