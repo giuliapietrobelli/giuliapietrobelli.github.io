@@ -240,7 +240,7 @@
       // callback called everytime the router changes page
       var $prevPage = $(prevPage);
       var $currentPage = $(currentPage);
-      var animating = true;
+      animating = true;
       $('body').addClass('animating');
 
       matrix.moveTo(currentPage);
@@ -330,6 +330,7 @@
 
       if($(router.getCurrentPage()).data('path') === reqPath) return;
 
+      console.log(animating);
       if(!animating) {
         router.goTo(reqPath);
       }

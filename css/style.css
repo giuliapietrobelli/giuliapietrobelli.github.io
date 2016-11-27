@@ -3,6 +3,10 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body.animating {
   overflow: hidden;
 }
@@ -13,10 +17,6 @@ body.home .nav-down,
 body.home .nav-right,
 body.home .nav-left {
   background-color: #f3edea;
-  /*background-image: url('../images/background-circle.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 115%;*/
 }
 
 body.about,
@@ -275,14 +275,18 @@ body.about .nav .nav-right::after {
   background-position: center;
 }
 
-.nav .nav-up a:hover,
-.nav .nav-up .active {
-  background-image: url(../images/logo_giulia_magenta.svg) !important;
+body.works .nav .nav-up a:not(.active) {
+  background-image: url(../images/logo_giulia.svg);
 }
 
 body.contacts .nav .nav-up a:not(.active),
 body.about .nav .nav-up a:not(.active) {
   background-image: url(../images/logo_giulia_white.svg);
+}
+
+.nav .nav-up a:hover,
+.nav .nav-up .active {
+  background-image: url(../images/logo_giulia_magenta.svg) !important;
 }
 
 .nav li:hover {
@@ -408,6 +412,7 @@ margin: 30px auto;
   text-align: center;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .gallery li {
