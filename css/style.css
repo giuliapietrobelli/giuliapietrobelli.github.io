@@ -1,6 +1,9 @@
 body {
   font-family: 'Lora', serif;
   overflow-x: hidden;
+  background-color: transparent;
+  transition: 0.3s all ease-in-out;
+
 }
 
 ::-webkit-scrollbar {
@@ -11,12 +14,21 @@ body.animating {
   overflow: hidden;
 }
 
+body .nav-up,
+body .nav-down,
+body .nav-right,
+body .nav-left {
+  transition: 0.3s all ease-in-out;
+  background-color: transparent;
+}
+
 body.home,
 body.home .nav-up,
 body.home .nav-down,
 body.home .nav-right,
 body.home .nav-left {
   background-color: #f3edea;
+  transition: 0.3s all ease-in-out;
 }
 
 body.about,
@@ -25,6 +37,7 @@ body.about .nav-down,
 body.about .nav-right,
 body.about .nav-left  {
   background-color: #836d6d;
+  transition: 0.3s all ease-in-out;
 }
 
 body.works,
@@ -33,6 +46,7 @@ body.works .nav-down,
 body.works .nav-right,
 body.works .nav-left  {
   background-color: #fff;
+  transition: 0.3s all ease-in-out;
 }
 
 body.contacts,
@@ -41,6 +55,7 @@ body.contacts .nav-down,
 body.contacts .nav-right,
 body.contacts .nav-left  {
   background-color: #5e595b;
+  transition: 0.3s all ease-in-out;
 }
 
 h1, h2, h4, h5, h6 {
@@ -291,7 +306,6 @@ body.about .nav .nav-up a:not(.active) {
 
 .nav li:hover {
   opacity: 10;
-  transition: 0.5s opacity ease-in-out;
 }
 
 .section {

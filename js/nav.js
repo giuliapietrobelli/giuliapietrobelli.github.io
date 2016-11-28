@@ -330,7 +330,6 @@
 
       if($(router.getCurrentPage()).data('path') === reqPath) return;
 
-      console.log(animating);
       if(!animating) {
         router.goTo(reqPath);
       }
