@@ -49,15 +49,6 @@ body.works .nav-left  {
   transition: 0.3s all ease-in-out;
 }
 
-body.contacts,
-body.contacts .nav-up,
-body.contacts .nav-down,
-body.contacts .nav-right,
-body.contacts .nav-left  {
-  background-color: #5e595b;
-  transition: 0.3s all ease-in-out;
-}
-
 h1, h2, h4, h5, h6 {
   font-family: 'Lora', serif;
 }
@@ -118,35 +109,34 @@ body::after {
 .nav .nav-down {
   left: 0;
   right: 0;
+  height: 0;
 }
 
 .nav .nav-up {
   top: 0;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 
 @media (min-width: 767px) {
   .nav .nav-up {
     padding-top: 50px;
-    padding-bottom: 15px;
-    padding-left: 61px;
-    padding-right: 61px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
 .nav .nav-down {
   bottom: 0;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 767px) {
   .nav .nav-down {
-    left: 61px;
-    right: 61px;
+    left: 51px;
+    right: 51px;
     padding-bottom: 50px;
-    padding-top: 15px;
   }
 }
 
@@ -155,55 +145,43 @@ body::after {
   top: 0;
   bottom: 0;
   flex-direction: column;
+  width: 0;
 }
 
 @media (min-width: 767px) {
   .nav .nav-left,
   .nav .nav-right {
-    top: 63px;
-    padding-bottom: 62px;
+    top: 51px;
+    padding-bottom: 50px;
   }
 }
 
 .nav .nav-left {
   left: 0;
-  padding-left: 5px;
-  padding-right: 10px;
+  padding-left: 22px;
+  padding-right: 20px;
 }
 
 @media (min-width: 767px) {
   .nav .nav-left {
     padding-left: 50px;
-    padding-right: 15px;
   }
-}
-
-.nav .nav-left a {
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  padding: 15px 0;
 }
 
 .nav .nav-right {
   right: 0;
-  padding-left: 10px;
-  padding-right: 5px;
+  padding-left: 20px;
+  padding-right: 22px;
 }
 
 @media (min-width: 767px) {
   .nav .nav-right {
-    padding-left: 15px;
     padding-right: 50px;
   }
 }
 
-.nav .nav-right a {
-  writing-mode: vertical-lr;
-  padding: 15px 0;
-  white-space: nowrap;
-}
-
-.nav a {
+.nav .nav-text,
+.nav .nav-logo {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
@@ -214,14 +192,15 @@ body::after {
   text-decoration: none;
 }
 
-body.contacts .nav a:not(.active),
-body.about .nav a:not(.active) {
+body.about .nav a {
   color: #f3edea;
 }
 
+body.about .nav a.active,
+body.about .nav a:hover,
 .nav a.active,
 .nav a:hover {
-  color: #ee3963 !important;
+  color: #ee3963;
   transition: 0.3s color ease-in-out;
 }
 
@@ -260,17 +239,12 @@ body.about .nav a:not(.active) {
     background-color: #5e595b;
     width: 1px;
   }
+
+  .nav .nav-right::after {
+    height: 5%;
+  }
 }
 
-
-body.contacts .nav .nav-up::before,
-body.contacts .nav .nav-up::after,
-body.contacts .nav .nav-down::before,
-body.contacts .nav .nav-down::after,
-body.contacts .nav .nav-left::before,
-body.contacts .nav .nav-left::after,
-body.contacts .nav .nav-right::before,
-body.contacts .nav .nav-right::after,
 body.about .nav .nav-up::before,
 body.about .nav .nav-up::after,
 body.about .nav .nav-down::before,
@@ -282,7 +256,7 @@ body.about .nav .nav-right::after {
   background-color: #f3edea;
 }
 
-.nav .nav-up a {
+.nav .nav-logo {
   color: transparent !important;
   background-image: url(../images/logo_giulia.svg);
   background-size: contain;
@@ -290,17 +264,19 @@ body.about .nav .nav-right::after {
   background-position: center;
 }
 
-body.works .nav .nav-up a:not(.active) {
+body.works .nav .nav-logo:not(.active) {
+  color: transparent !important;
   background-image: url(../images/logo_giulia.svg);
 }
 
-body.contacts .nav .nav-up a:not(.active),
-body.about .nav .nav-up a:not(.active) {
+body.about .nav .nav-logo:not(.active) {
+  color: transparent !important;
   background-image: url(../images/logo_giulia_white.svg);
 }
 
-.nav .nav-up a:hover,
-.nav .nav-up .active {
+.nav .nav-logo:hover,
+.nav .nav-logo.active {
+  color: transparent !important;
   background-image: url(../images/logo_giulia_magenta.svg) !important;
 }
 
@@ -530,6 +506,99 @@ margin: 30px auto;
   text-align: center;
 }
 
+.email {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media (min-width: 767px) {
+  .email {
+    font-size: 25px;
+  }
+}
+
+.email:hover {
+  text-decoration: none;
+  transition: 0.3s color ease-in-out;
+  color: #ee3963;
+}
+
+.contact-icons {
+  text-align: center;
+}
+
+.contact-icons-icon {
+  display: block;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 15px 0;
+  transition: 0.3s all ease-in-out;
+  background-size: contain;
+}
+
+.contact-icons-icon.linkedin {
+  /* grey */
+  background-image: url('../images/linkedin_button.svg');
+}
+
+.contact-icons-icon.behance {
+  /* grey */
+  background-image: url('../images/behance_button.svg');
+}
+
+.contact-icons-icon.pinterest {
+  /* grey */
+  background-image: url('../images/pinterest_button.svg');
+}
+
+.contact-icons-icon.linkedin:hover {
+  /* magenta*/
+  background-image: url('../images/linkedin_button.svg');
+}
+
+.contact-icons-icon.behance:hover {
+  /* magenta*/
+  background-image: url('../images/behance_button.svg');
+}
+
+.contact-icons-icon.pinterest:hover {
+  /* magenta*/
+  background-image: url('../images/pinterest_button.svg');
+}
+
+.about .contact-icons-icon.linkedin {
+  background-image: url('../images/linkedin_button.svg');
+}
+
+.about .contact-icons-icon.behance {
+  background-image: url('../images/behance_button.svg');
+}
+
+.about .contact-icons-icon.pinterest {
+  background-image: url('../images/pinterest_button.svg');
+}
+
+.about .contact-icons-icon.linkedin:hover {
+  /* magenta*/
+  background-image: url('../images/linkedin_button.svg');
+}
+
+.about .contact-icons-icon.behance:hover {
+  /* magenta*/
+  background-image: url('../images/behance_button.svg');
+}
+
+.about .contact-icons-icon.pinterest:hover {
+  /* magenta*/
+  background-image: url('../images/pinterest_button.svg');
+}
+
+.contact-icons-icon:hover {
+  transition: 0.3s all ease-in-out;
+}
+
 /*----------- LIGHTBOX--------------------------------------------------*/
 
 .modal {
@@ -727,42 +796,3 @@ button .close {
 
 
 /*----------- LIGHTBOX-------------------------------------------------*/
-
-.contact-links {
-  text-align: center;
-}
-
-.email {
-  display: block;
-  color: #fff;
-  font-size: 18px;
-}
-
-@media (min-width: 767px) {
-  .email {
-    font-size: 25px;
-  }
-}
-
-.email:hover {
-  text-decoration: none;
-  transition: 0.3s color ease-in-out;
-  color: #ee3963;
-}
-
-.contact-links .icons a {
-  display: inline-block;
-  margin: 10px;
-}
-
-.contact-links img {
-  max-width: 60px;
-  transition: 1s border ease-in-out;
-  border: 1px solid transparent;
-}
-
-.contact-links a:hover img,
-.contact-links a:focus img  {
-  border: 1px solid #f3edea;
-  text-decoration: none;
-}
