@@ -183,13 +183,24 @@ body::after {
 .nav .nav-text,
 .nav .nav-logo {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
   padding: 2px 15px;
   text-transform: uppercase;
   color: #5e595b;
   text-decoration: none;
+}
+
+@media (max-width: 360px) {
+  .nav .nav-text,
+  .nav .nav-logo {
+    font-size: 15px;
+  }
+}
+
+.nav .email {
+  text-transform: lowercase;
 }
 
 body.about .nav a {
@@ -329,10 +340,10 @@ body.about .nav .nav-logo:not(.active) {
 }
 
 .about-me img {
-  max-width: 70%;
+  max-width: 65%;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 1024px) {
   .about-me .me {
     display: block;
   }
@@ -540,32 +551,32 @@ margin: 30px auto;
 
 .contact-icons-icon.linkedin {
   /* grey */
-  background-image: url('../images/linkedin_button.svg');
+  background-image: url('../images/linkedin_button-grey.svg');
 }
 
 .contact-icons-icon.behance {
   /* grey */
-  background-image: url('../images/behance_button.svg');
+  background-image: url('../images/behance_button-grey.svg');
 }
 
 .contact-icons-icon.pinterest {
   /* grey */
-  background-image: url('../images/pinterest_button.svg');
+  background-image: url('../images/pinterest_button-grey.svg');
 }
 
 .contact-icons-icon.linkedin:hover {
   /* magenta*/
-  background-image: url('../images/linkedin_button.svg');
+  background-image: url('../images/linkedin_button-magenta.svg');
 }
 
 .contact-icons-icon.behance:hover {
   /* magenta*/
-  background-image: url('../images/behance_button.svg');
+  background-image: url('../images/behance_button-magenta.svg');
 }
 
 .contact-icons-icon.pinterest:hover {
   /* magenta*/
-  background-image: url('../images/pinterest_button.svg');
+  background-image: url('../images/pinterest_button-magenta.svg');
 }
 
 .about .contact-icons-icon.linkedin {
@@ -582,17 +593,17 @@ margin: 30px auto;
 
 .about .contact-icons-icon.linkedin:hover {
   /* magenta*/
-  background-image: url('../images/linkedin_button.svg');
+  background-image: url('../images/linkedin_button-magenta.svg');
 }
 
 .about .contact-icons-icon.behance:hover {
   /* magenta*/
-  background-image: url('../images/behance_button.svg');
+  background-image: url('../images/behance_button-magenta.svg');
 }
 
 .about .contact-icons-icon.pinterest:hover {
   /* magenta*/
-  background-image: url('../images/pinterest_button.svg');
+  background-image: url('../images/pinterest_button-magenta.svg');
 }
 
 .contact-icons-icon:hover {
