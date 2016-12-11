@@ -320,7 +320,7 @@
       }
     });
 
-    $('.nav a:not(.email)').on('click', function(e) {
+    $('.nav a.nav-link').on('click', function(e) {
       e.preventDefault();
       var $target = $(e.target);
       var reqPath = $target.attr('href');
