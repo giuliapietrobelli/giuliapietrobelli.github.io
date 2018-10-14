@@ -50,11 +50,12 @@ body.works .nav-left  {
 }
 
 h1, h2, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Domine', serif;
 }
 
 h3 {
   font-family: 'Domine', serif;
+  font-size: 30px;
 }
 
 img {
@@ -183,7 +184,7 @@ body::after {
 .nav .nav-text,
 .nav .nav-logo {
   font-family: 'Domine', serif;
-  font-size: 18px;
+  font-size: 30px;
   letter-spacing: 1px;
   padding: 2px 15px;
   color: #5e595b;
@@ -360,14 +361,14 @@ body.about .nav .nav-logo:not(.active) {
 .about-me .my-description p {
   position: relative;
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.8em;
   color: #f3edea;
 }
 
 @media (min-width: 767px) {
   .about-me .my-description p {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 
@@ -444,7 +445,7 @@ margin: 30px auto;
 .gallery-title .package {
   position: absolute;
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
   top: 50%;
   left: 0;
   right: 0;
@@ -454,7 +455,7 @@ margin: 30px auto;
 
 .gallery-title p {
   text-transform: lowercase;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .row {
@@ -478,7 +479,7 @@ margin: 30px auto;
 
 .btn-link {
   color: #5e595b;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 1px;
   font-weight: normal;
   margin-top: 100px;
@@ -489,7 +490,7 @@ margin: 30px auto;
 
 .more .btn {
   display: block;
-  font-family: 'montserrat', sans-serif;
+  font-family: 'Open Sans', serif;
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
@@ -632,21 +633,15 @@ margin: 30px auto;
 .modal-title {
   color: #fff;
   font-family: 'Domine', serif;
-  font-size: 41px;
+  font-size: 40px;
   text-align: center;
 }
 
-#la-feature .modal-title {
-  color: black;
-  font-family: 'Domine', serif;
-  font-size: 41px;
-  text-align: center;
-}
 
 .modal-description {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 21px;
+  font-size: 18px;
   text-align: center;
   line-height: 1.8em;
   margin: auto;
@@ -654,16 +649,6 @@ margin: 30px auto;
   padding: 30px 0 10px 0;
 }
 
-#la-feature .modal-description {
-  color: black;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 21px;
-  text-align: center;
-  line-height: 1.8em;
-  margin: auto;
-  max-width: 800px;
-  padding: 30px 0 10px 0;
-}
 
 @media (max-width: 767px) {
   .modal-title {
@@ -699,7 +684,7 @@ button .close {
 }
 
 #la-feature .modal-header {
- background-color: #E3E3E3;
+ background-color: #5e595b;
 }
 
 .la-feature-stripe1 {
@@ -742,7 +727,23 @@ button .close {
   background-color: #d6d6d8;
 }
 
-#sz-logo .modal-header {
+#la-emails .modal-header {
+ background-color: #5e595b;
+}
+
+.la-emails-stripe1 {
+  background-color: rgb(255, 255, 255);
+}
+
+.la-emails-stripe2 {
+  background-color: rgb(255, 255, 255);
+}
+
+.la-emails-stripe3 {
+  background-color: rgb(255, 255, 255);
+}
+
+/* #sz-logo .modal-header {
  background-color: #5e595b;
 }
 
@@ -756,7 +757,7 @@ button .close {
 
 .sz-stripe3 {
   background-color: #7a9d9c;
-}
+} */
 
 #diesel-tribute .modal-header {
  background-color: #5e595b;
@@ -772,6 +773,10 @@ button .close {
 
 .tribute-stripe3 {
  background-color: #d03c96;
+}
+
+.tribute-stripe4 {
+ background-color: #fff;
 }
 
 #findmybike .modal-header {
