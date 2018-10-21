@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   background-color: transparent;
   transition: 0.3s all ease-in-out;
@@ -50,11 +50,12 @@ body.works .nav-left  {
 }
 
 h1, h2, h4, h5, h6 {
-  font-family: 'Lora', serif;
+  font-family: 'Domine', serif;
 }
 
 h3 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Domine', serif;
+  font-size: 30px;
 }
 
 img {
@@ -182,12 +183,10 @@ body::after {
 
 .nav .nav-text,
 .nav .nav-logo {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: bold;
+  font-family: 'Domine', serif;
+  font-size: 30px;
   letter-spacing: 1px;
   padding: 2px 15px;
-  text-transform: uppercase;
   color: #5e595b;
   text-decoration: none;
 }
@@ -362,14 +361,14 @@ body.about .nav .nav-logo:not(.active) {
 .about-me .my-description p {
   position: relative;
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.8em;
   color: #f3edea;
 }
 
 @media (min-width: 767px) {
   .about-me .my-description p {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 
@@ -385,8 +384,7 @@ p a:hover {
 
 .about-me .btn {
 display: block;
-font-family: 'montserrat', sans-serif;
-text-transform: uppercase;
+font-family: 'Open Sans', sans-serif;
 font-weight: 700;
 text-decoration: none;
 letter-spacing: 1px;
@@ -447,8 +445,7 @@ margin: 30px auto;
 .gallery-title .package {
   position: absolute;
   color: #fff;
-  text-transform: uppercase;
-  font-size: 20px;
+  font-size: 30px;
   top: 50%;
   left: 0;
   right: 0;
@@ -458,8 +455,7 @@ margin: 30px auto;
 
 .gallery-title p {
   text-transform: lowercase;
-  font-style: italic;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .row {
@@ -483,8 +479,7 @@ margin: 30px auto;
 
 .btn-link {
   color: #5e595b;
-  font-size: 15px;
-  text-transform: uppercase;
+  font-size: 18px;
   letter-spacing: 1px;
   font-weight: normal;
   margin-top: 100px;
@@ -495,8 +490,7 @@ margin: 30px auto;
 
 .more .btn {
   display: block;
-  font-family: 'montserrat', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Open Sans', serif;
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
@@ -638,23 +632,23 @@ margin: 30px auto;
 
 .modal-title {
   color: #fff;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  font-size: 41px;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-family: 'Domine', serif;
+  font-size: 40px;
   text-align: center;
 }
 
+
 .modal-description {
   color: #fff;
-  font-family: 'Lora', serif;
-  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
   text-align: center;
   line-height: 1.8em;
   margin: auto;
   max-width: 800px;
   padding: 30px 0 10px 0;
 }
+
 
 @media (max-width: 767px) {
   .modal-title {
@@ -677,7 +671,7 @@ button .close {
 }
 
 .close {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Domine', serif;
   font-weight: normal;
   font-size: 50px;
   color: #fff;
@@ -689,7 +683,19 @@ button .close {
   transition: 0.3s font-size ease-in-out;
 }
 
-#deer-illustration .modal-header {
+#la-feature .modal-header {
+ background-color: #5e595b;
+}
+
+.la-feature-stripe1 {
+  background-color: #E3E3E3;
+}
+
+.la-feature-stripe2 {
+  background-color: #E3E3E3;
+}
+
+/* #deer-illustration .modal-header {
  background-color: #5e595b;
 }
 
@@ -703,7 +709,7 @@ button .close {
 
 .deer-stripe3 {
   background-color: #ffd4a7;
-}
+} */
 
 #dvd-crudo .modal-header {
  background-color: #5e595b;
@@ -721,7 +727,23 @@ button .close {
   background-color: #d6d6d8;
 }
 
-#sz-logo .modal-header {
+#la-emails .modal-header {
+ background-color: #5e595b;
+}
+
+.la-emails-stripe1 {
+  background-color: rgb(255, 255, 255);
+}
+
+.la-emails-stripe2 {
+  background-color: rgb(255, 255, 255);
+}
+
+.la-emails-stripe3 {
+  background-color: rgb(255, 255, 255);
+}
+
+/* #sz-logo .modal-header {
  background-color: #5e595b;
 }
 
@@ -735,7 +757,7 @@ button .close {
 
 .sz-stripe3 {
   background-color: #7a9d9c;
-}
+} */
 
 #diesel-tribute .modal-header {
  background-color: #5e595b;
@@ -751,6 +773,10 @@ button .close {
 
 .tribute-stripe3 {
  background-color: #d03c96;
+}
+
+.tribute-stripe4 {
+ background-color: #fff;
 }
 
 #findmybike .modal-header {
